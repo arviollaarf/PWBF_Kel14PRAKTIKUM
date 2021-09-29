@@ -13,6 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
-    return view('welcome');
+    return view (' Home ');
 });
+
+Route::get('/about', function () {
+    return view  ('About', [
+        "nama" => "Kelompok 14",
+        "pengantar" => "Selamat datang di viola boutique"
+    ]);
+});
+
+Route::get('/blog', function () {
+    return view ('posts');
+});
+
+Route::get('TERAKHIRController', 'App\Http\Controllers\TERAKHIRController@Index');
+
