@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTableSupplier extends Migration
+class CreateTableDetailPenerimaan extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateTableSupplier extends Migration
      */
     public function up()
     {
-        Schema::create('table_supplier', function (Blueprint $table) {
+        Schema::create('table_detail_penerimaan', function (Blueprint $table) {
             $table->id();
-            $table -> string('nama_sup',25);
-            $table -> string('alamat_sup',30);
+            $table->integer('harga_his');
+            $table->integer('jumlah_his');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateTableSupplier extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_supplier');
+        Schema::dropIfExists('table_detail_penerimaan');
     }
 }

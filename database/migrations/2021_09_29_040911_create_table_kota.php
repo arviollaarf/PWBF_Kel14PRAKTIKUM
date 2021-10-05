@@ -15,6 +15,7 @@ class CreateTableKota extends Migration
     {
         Schema::create('table_kota', function (Blueprint $table) {
             $table->id();
+            $table -> string('nama_kota',30);
             $table->timestamps();
         });
     }
