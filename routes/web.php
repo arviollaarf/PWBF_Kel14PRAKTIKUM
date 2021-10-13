@@ -14,9 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', function () {
-    return view (' Home ');
-});
+
 
 Route::get('/about', function () {
     return view  ('About', [
@@ -25,8 +23,34 @@ Route::get('/about', function () {
     ]);
 });
 
-Route::get('/blog', function () {
-    return view ('posts');
+
+Route::get('/', function () {
+    return view('home');
+}); //GAUSA DIAPA2IN
+
+
+Route::get('/home', function () {
+    return view('home');
+});
+
+Route::get('/about', function () {
+    return view('about');
+});
+
+Route::get('/login', function () {
+    return view('login');
+});
+
+Route::get('/form', function () {
+    return view('form');
+});
+
+Route::get('/pendataan', function () {
+    return view('pendataan');
+});
+
+Route::get('/pemesanan', function () {
+    return view('pemesanan');
 });
 
 Route::get('TERAKHIRController', 'App\Http\Controllers\TERAKHIRController@Index');

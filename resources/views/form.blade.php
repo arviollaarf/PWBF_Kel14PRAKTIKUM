@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>PEMESANAN</h1>
+    <h1>FORMULIR</h1>
 </body>
-</html>'
+</html>
